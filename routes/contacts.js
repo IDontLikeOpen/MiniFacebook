@@ -25,7 +25,7 @@ router.put('/:id', (req,res) => {
  res.send('Update contact')
 })
 
-// @route   DELETET api/contacts/:id
+// @route   DELETE api/contacts/:id
 // @desc    Delete contacts
 // @access    Private
 
