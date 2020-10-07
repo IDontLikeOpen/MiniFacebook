@@ -1,80 +1,83 @@
-import React, {useReducer} from 'react'
-import {v4 as uuidv4} from 'uuid'
-import ContactContext from './contactContext'
-import contactReducer from './contactReducer'
+import React, { useReducer } from "react";
+import { v4 as uuidv4 } from "uuid";
+import ContactContext from "./contactContext";
+import ContactReducer from "./contactReducer";
 import {
- ADD_CONTACT,
- DELETE_CONTACT,
- SET_CURRENT,
- CLEAR_CURRENT,
- UPDATE_CONTACT,
- FILTER_CONTACTS,
- CLEAR_FILTER,
- SET_ALERT,
- REMOVE_ALERT
-} from '../types'
+  ADD_CONTACT,
+  DELETE_CONTACT,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_CONTACT,
+  FILTER_CONTACTS,
+  CLEAR_FILTER,
+  SET_ALERT,
+  REMOVE_ALERT,
+} from "../types";
 
-const ContactState = props => {
- const initialState = {
-  contacts: [
-   {
-    id:1,
-    name: 'Jill Johnson',
-    email: 'jill@gmail.com',
-    phone:'111-2-2-2-2',
-    type:'personal'
-   },
-   {
-    id:2,
-    name: 'Jim Johnson',
-    email: 'jim@gmail.com',
-    phone:'111-53452',
-    type:'personal'
-   },
-   {
-    id:3,
-    name: 'Jia Johnson',
-    email: 'jia@gmail.com',
-    phone:'111-53452-2',
-    type:'proffesional'
-   }
-  ]
- }
+const ContactState = (props) => {
+  const initialState = {
+    contacts: [
+      {
+        id: 1,
+        name: "Jill Johnson",
+        email: "jill@gmail.com",
+        phone: "111-2-2-2-2",
+        type: "personal",
+      },
+      {
+        id: 2,
+        name: "Jim Johnson",
+        email: "jim@gmail.com",
+        phone: "111-53452",
+        type: "personal",
+      },
+      {
+        id: 3,
+        name: "Jia Johnson",
+        email: "jia@gmail.com",
+        phone: "111-53452-2",
+        type: "proffesional",
+      },
+    ],
+  };
 
- const [state, dispatch] = useReducer(contactReducer, initialState)
+  const [state, dispatch] = useReducer(ContactReducer, initialState);
 
- // Add Contact
-const addContact = contact => {
- contact.id = uuidv4()
- dispatch( {
-   TYPE: ADD_CONTACT,
-   payload: contact
- })
-}
+  // Add Contact
+  const addContact = (contact) => {
+    console.log('i got ccontatc');
+    contact.id = uuidv4();
+    console.log(contact);
+    dispatch({
+      TYPE: ADD_CONTACT,
+      payload: contact,
+    })
+    console.log('ccontatc');
 
+  };
 
- // Delete contact
+  // Delete contact
 
- // Set Current Contact
+  // Set Current Contact
 
- // Clear Current Contact
- 
- // Update Contact
+  // Clear Current Contact
 
- // Filter Contact
+  // Update Contact
 
- // Clear Contact
+  // Filter Contact
 
- return (
-  <ContactContext.Provider
-   value={{
-    contacts: state.contacts,
-    addContact
-   }}
-  >
-   {props.children}
-  </ContactContext.Provider>
- )
-}
+  // Clear Contact
 
-export default ContactState
+  return (
+    <ContactContext.Provider
+      value={{
+        contacts: state.contacts,
+        addContact,
+      }}
+    >
+      {props.children}
+    </ContactContext.Provider>
+  );
+};
+
+export default ContactState;

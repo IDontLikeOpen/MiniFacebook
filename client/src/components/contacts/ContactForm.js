@@ -17,15 +17,15 @@ const ContactForm = () => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (e) => {
-    e.preventDeafult();
+  const onSubmit = e => {
+    e.preventDefault()
     contactContext.addContact(contact)
     setContact({
       name: "",
       email: "",
       phone: "",
       type: "personal",
-    });
+    })
   };
 
   return (
@@ -77,7 +77,7 @@ const ContactForm = () => {
         />
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
