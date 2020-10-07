@@ -76,7 +76,6 @@ router.post(
                     res.json({ token: token })
                 }
             );
-            /*  */
 
         } catch (err) {
             console.error(err.message);
