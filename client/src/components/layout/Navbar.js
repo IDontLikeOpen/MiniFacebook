@@ -14,14 +14,13 @@ const Navbar = ({ title, icon }) => {
   const onLogout = () => {
     logout();
   };
-
+// why not passing it straight away??
   const authLinks = (
     <Fragment>
       <li>Hello {user && user.name}</li>
       <li>
-        <a onClick={logout} href="#!">
+        <a onClick={onLogout} href="#!">
           {" "}
-          // why not passing it straight away??
           <i className="fas fa-si"></i> <span className="hide-sm">Logout</span>
         </a>
       </li>
