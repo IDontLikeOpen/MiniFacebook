@@ -111,7 +111,7 @@ const ContactState = props => {
     }
 
     try {
-      const res = await axios.post(`/api/contacts/${contact._id}`, contact, config)
+      const res = await axios.put(`/api/contacts/${contact._id}`, contact, config)
       dispatch({
       type: UPDATE_CONTACT,
       payload: res.data
