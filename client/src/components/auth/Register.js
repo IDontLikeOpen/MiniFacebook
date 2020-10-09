@@ -16,10 +16,9 @@ const Register = props => {
 
     if(error === 'User already exists') {
       setAlert(error, 'danger')
-      clearErrors() // what kind of errors?? like 404 500?
+      clearErrors() // what kind of errors?? like 404 500? //  -- what?/? s lint
     }
     // eslint-disable-next-line
-    //  -- what?/?
   }, [error, isAuthenticated, props.history])
 
   const [user, setUser] = useState({
