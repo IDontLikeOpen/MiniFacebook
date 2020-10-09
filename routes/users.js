@@ -57,7 +57,7 @@ router.post(
             // this is the object that we want send in the token
             // token will includes logged in user id
 
-            // We are getting this token once a new user register
+            // We are getting this token once a new user registers
 
             // Next we will create a login with a current created user and also get the
             // token so that we can authenticate.
@@ -79,7 +79,7 @@ router.post(
 
         } catch (err) {
             console.error(err.message);
-            res.status(500).send('Server Error');
+            res.status(500).send('Server Error'); // are these all the same ress??
         }
     },
 );
