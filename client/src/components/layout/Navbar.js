@@ -13,6 +13,7 @@ const Navbar = ({ title, icon }) => {
 
   const onLogout = () => {
     logout();
+    clearContacts()
   };
 // why not passing it straight away??
   const authLinks = (

@@ -32,7 +32,7 @@ const ContactForm = () => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault()
     if(current===null){
       addContact(contact)

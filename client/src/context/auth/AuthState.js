@@ -29,7 +29,6 @@ const AuthState = (props) => {
     if (localStorage.token) {
       setAuthToken(localStorage.token)
     }
-    console.log('i am in load');
     try {
       const res = await axios.get('/api/auth')
       dispatch({
@@ -52,7 +51,6 @@ const AuthState = (props) => {
 
     try {
       const res = await axios.post('/api/users', formData, config)
-      console.log('i am in reg');
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data // -- IT IS TOKEN FROM USERS.POST
