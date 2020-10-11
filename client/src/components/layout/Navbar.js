@@ -15,7 +15,7 @@ const Navbar = ({ title, icon }) => {
     logout();
     clearContacts()
   };
-// why not passing it straight away??
+
   const authLinks = (
     <Fragment>
       <li>Hello {user && user.name}</li>
@@ -40,7 +40,7 @@ const Navbar = ({ title, icon }) => {
   );
 
   return (
-    <div className="navbar bg-primary">
+    <div className="navbar">
       <h1>
         <i className={icon}></i> {title}
       </h1>
@@ -55,7 +55,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  title: "Contact Keeper",
+  title: "Mini Facebook",
   icon: "fas fa-id-card-alt",
 };
 

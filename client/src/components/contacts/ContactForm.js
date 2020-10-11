@@ -53,7 +53,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="contact-form">
       <h2 className="text-primary">{current ? 'Update Contact' : 'Add Contact'}</h2>
       <input
         type="text"
@@ -70,7 +70,7 @@ const ContactForm = () => {
         onChange={onChange}
       />
       <input
-        type="phone"
+        type="email"
         placeholder="Phone"
         name="phone"
         value={phone}
@@ -97,7 +97,7 @@ const ContactForm = () => {
         <input
           type="submit"
           value={current ? 'Update Contact' : 'Add Contact'}
-          className="btn btn-primary btn-block"
+          className="btn btn-block"
         />
       </div>
       

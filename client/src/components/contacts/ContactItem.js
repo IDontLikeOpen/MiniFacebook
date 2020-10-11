@@ -13,7 +13,7 @@ const ContactItem = ({ contact }) => {
   };
 
   return (
-    <div className="card bg-light">
+    <div className="card bg">
       <i className="fas fa-acorn"></i>
       <h3 className="text-primary text-left">
         {name}{" "}
@@ -41,8 +41,8 @@ const ContactItem = ({ contact }) => {
         )}
       </ul>
       <p>
-        <button className="btn btn-dark btn-sm" onClick={() => setCurrent(contact)} >Edit</button>
-        <button className="btn btn-danger btn-sm" onClick={onDelete}>
+        <button className="btn  btn-sm" onClick={() => setCurrent(contact)} >Edit</button>
+        <button className="btn  btn-sm" onClick={onDelete}>
         {/* <button className="btn btn-danger btn-sm" onClick={() => onDelete(id)}> */}
           {" "}
           Delete{" "}

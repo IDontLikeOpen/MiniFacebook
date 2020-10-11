@@ -85,7 +85,7 @@ const Register = props => {
           type="submit"
           onClick={onSubmit}
           value="Register"
-          className="btn btn-block btn-primary"
+          className="btn btn-block"
         />
       </form>
     </div>
